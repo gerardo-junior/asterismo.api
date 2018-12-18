@@ -21,21 +21,13 @@ cache:
 
 jobs:  
   include:
-    - stage: test               
-
-      name: "lint code"
+    - stage: Tests               
       script: echo "run integration tests...' 
-      
-      name: "Unit Tests"           
       script: echo "run unit tests...' 
-      
-      name: "Integration Tests"
       script: echo "run integration tests...'
 
     - stage: deploy              
-
-      name: "Deploy to my vps"
-      script: echo "run integration tests...' 
-            
-      name: "Deploy to heroku"
-      script: echo "run integration tests...'
+      deploy: &heroku
+        provider: heroku
+        app: asterismo.api
+        api_key: $HEROKU_AUTH_TOKEN
