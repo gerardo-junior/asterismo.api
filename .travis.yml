@@ -1,4 +1,4 @@
-language: php
+language: bash
 sudo: true
 
 services:
@@ -22,19 +22,19 @@ cache:
 jobs:  
   include:
     - stage: Tests
-      name: lint tests               
+      name: Lint tests               
       script: echo "run lint tests...'
     
     - stage: Tests
-      name: unit tests 
+      name: Unit tests 
       script: echo "run unit tests...'
 
     - stage: Tests
-      name: integration tests 
+      name: Integration tests 
       script: echo "run integration tests...'
 
     - stage: Deploy
-      name: Deploy to heroku    
+      name: Deploy to heroku
       deploy: &heroku
         provider: heroku
         app: asterismo.api
