@@ -28,12 +28,12 @@ jobs:
     - stage: Tests
       name: unit tests 
       script: echo "run unit tests...'
-      
+
     - stage: Tests
       name: integration tests 
       script: echo "run integration tests...'
 
-    - stage: deploy
+    - stage: Deploy
       name: Deploy to heroku    
       deploy: &heroku
         provider: heroku
