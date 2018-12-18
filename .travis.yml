@@ -21,9 +21,12 @@ cache:
 
 jobs:  
   include:
-    - stage: Tests               
-      script: echo "run integration tests...' 
-      script: echo "run unit tests...' 
+    - stage: Tests
+      name: lint tests               
+      script: echo "run lint tests...'
+      name: unit tests 
+      script: echo "run unit tests...'
+      name: integration tests 
       script: echo "run integration tests...'
 
     - stage: deploy              
