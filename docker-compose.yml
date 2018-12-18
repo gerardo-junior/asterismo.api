@@ -1,0 +1,31 @@
+version: "3.4"
+services:
+
+  api: 
+    image: gerardojunior/symfony.environment:stable
+    build: .docker
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/share/src
+    ports:
+      - 1234:80
+      - 9000:9000 # xdebug port
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb:10.4
+    restart: on-failure
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - type: volume
+        source: dbdata
+        target: /var/lib/mysql
+        volume:
+          nocopy: true
+
+volumes:
+  dbdata:
+    name: "asterismo-dbdata"
