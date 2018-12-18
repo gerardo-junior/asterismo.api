@@ -1,5 +1,5 @@
-sudo: true
 language: php
+sudo: true
 
 services:
   - docker
@@ -21,7 +21,7 @@ cache:
 
 jobs:  
   include:
-    - stage: "Tests"               
+    - stage: test               
 
       name: "lint code"
       script: echo "run integration tests...' 
@@ -32,7 +32,7 @@ jobs:
       name: "Integration Tests"
       script: echo "run integration tests...'
 
-    - stage: "Deploy"               
+    - stage: deploy              
 
       name: "Deploy to my vps"
       script: echo "run integration tests...' 
