@@ -8,6 +8,9 @@ services:
       - type: bind
         source: ./
         target: /usr/share/src
+    tmpfs:
+      - /usr/share/src/var/log:size=100M
+      - /usr/share/src/var/cache:size=1G
     ports:
       - 1234:80
       - 9000:9000 # xdebug port
