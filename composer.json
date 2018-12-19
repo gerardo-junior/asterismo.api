@@ -47,7 +47,7 @@
             "@auto-scripts"
         ],
         "test-lint": "phplint",
-        "test-unit": "",
+        "test-unit": "./bin/phpunit",
         "test-e2e": "boomerang ./tests/e2e",
         "test": [
             "@test-lint",
@@ -66,6 +66,7 @@
     },
     "require-dev": {
         "boomerang/boomerang": "^0.3.0",
-        "overtrue/phplint": "^1.1"
+        "overtrue/phplint": "^1.1",
+        "symfony/test-pack": "^1.0"
     }
 }
