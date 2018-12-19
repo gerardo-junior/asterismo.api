@@ -36,6 +36,7 @@ jobs:
     - stage: Deploy
       name: Deploy to heroku
       deploy: &heroku
+        on: master
         provider: heroku
         app: asterismo
         api_key: $HEROKU_AUTH_TOKEN
