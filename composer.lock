@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c32c5f716cc3ff5b3112fce2ec77dde",
+    "content-hash": "74cdf348dd994bd769eda7487fbe3946",
     "packages": [
         {
             "name": "psr/cache",
@@ -1389,6 +1389,154 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "boomerang/boomerang",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/donatj/Boomerang.git",
+                "reference": "326f03423b0251d4cdf62245368c9196aefc5b6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/donatj/Boomerang/zipball/326f03423b0251d4cdf62245368c9196aefc5b6b",
+                "reference": "326f03423b0251d4cdf62245368c9196aefc5b6b",
+                "shasum": ""
+            },
+            "require": {
+                "donatj/cli-toolkit": "~0.2",
+                "donatj/flags": "~1",
+                "ext-curl": "*",
+                "ext-spl": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "donatj/drop": "*",
+                "donatj/mock-webserver": "~0.4.0",
+                "phpunit/phpunit": "4.*",
+                "ralouphie/getallheaders": "^2.0"
+            },
+            "bin": [
+                "composer/bin/boomerang"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Boomerang": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jesse G. Donat",
+                    "email": "donatj@gmail.com",
+                    "homepage": "https://donatstudios.com",
+                    "role": "Lead"
+                }
+            ],
+            "description": "The Boomerang API Endpoint Testing Framework.",
+            "homepage": "http://boomerang.work/",
+            "keywords": [
+                "api",
+                "testing"
+            ],
+            "time": "2018-06-04T19:42:16+00:00"
+        },
+        {
+            "name": "donatj/cli-toolkit",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/donatj/CLI-Toolkit.git",
+                "reference": "e612c954fdc5a3a2410402f90a53fcfa5ce850d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/donatj/CLI-Toolkit/zipball/e612c954fdc5a3a2410402f90a53fcfa5ce850d7",
+                "reference": "e612c954fdc5a3a2410402f90a53fcfa5ce850d7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CLI": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jesse G. Donat",
+                    "email": "donatj@gmail.com",
+                    "homepage": "http://donatstudios.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple PHP CLI Toolkit",
+            "homepage": "https://github.com/donatj/CLI-Toolkit",
+            "keywords": [
+                "CLI-Toolkit",
+                "cli"
+            ],
+            "time": "2017-05-15T15:51:37+00:00"
+        },
+        {
+            "name": "donatj/flags",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/donatj/Flags.git",
+                "reference": "36184f70c412b8096ecf00e927d22ad13218d931"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/donatj/Flags/zipball/36184f70c412b8096ecf00e927d22ad13218d931",
+                "reference": "36184f70c412b8096ecf00e927d22ad13218d931",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "donatj/drop": "*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "donatj": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jesse Donat",
+                    "email": "donatj@gmail.com",
+                    "homepage": "http://donatstudios.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "GNU-style PHP command line argument parser",
+            "keywords": [
+                "arguments",
+                "cli",
+                "flags",
+                "gnu-style",
+                "options"
+            ],
+            "time": "2017-01-16T16:53:37+00:00"
+        },
         {
             "name": "overtrue/phplint",
             "version": "1.1.7",
