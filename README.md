@@ -1,4 +1,4 @@
-# asterismo.api
+# Asterismo backend API
 
 ```
     [+] AUTOR:        Gerardo Junior
