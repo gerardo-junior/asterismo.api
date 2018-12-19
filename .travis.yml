@@ -11,7 +11,6 @@ before_cache:
 before_install:
   # Load cached docker images
   - if [[ -d $HOME/docker ]]; then ls $HOME/docker/*.tar.gz | xargs -I {file} sh -c "zcat {file} | docker load"; fi
-  - docker-compose pull
 
 cache:
   bundler: true
@@ -21,6 +20,10 @@ cache:
 
 jobs:  
   include:
+    - stage: Build
+      name: Build docker image              
+      script: docker-compose build
+
     - stage: Tests
       name: Lint tests               
       script: docker-compose run api composer test-lint
