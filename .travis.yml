@@ -32,14 +32,6 @@ jobs:
     - stage: Tests
       name: Integration tests 
       script: docker-compose run api composer test-e2e
-
-    - stage: Deploy
-      name: Deploy to heroku production
-      deploy: &heroku
-        on: master
-        provider: heroku
-        app: asterismo
-        api_key: $HEROKU_AUTH_TOKEN
     
     - stage: Deploy
       name: Deploy to heroku staging
@@ -47,4 +39,12 @@ jobs:
         on: develop
         provider: heroku
         app: asterismo-develop
+        api_key: $HEROKU_AUTH_TOKEN
+
+    - stage: Deploy
+      name: Deploy to heroku production
+      deploy: &heroku
+        on: master
+        provider: heroku
+        app: asterismo
         api_key: $HEROKU_AUTH_TOKEN
