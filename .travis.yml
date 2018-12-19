@@ -21,19 +21,19 @@ cache:
 jobs:  
   include:
     - stage: Build
-      name: Build docker image              
+      name: Build docker image  
       script: docker-compose build
 
     - stage: Tests
-      name: Lint tests               
+      name: Lint tests
       script: docker-compose run api composer test-lint
     
     - stage: Tests
-      name: Unit tests 
+      name: Unit tests
       script: docker-compose run api composer test-unit
 
     - stage: Tests
-      name: Integration tests 
+      name: e2e tests
       script: docker-compose run api composer test-e2e
     
     - stage: Deploy
