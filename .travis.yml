@@ -11,6 +11,7 @@ before_cache:
 before_install:
   # Load cached docker images
   - if [[ -d $HOME/docker ]]; then ls $HOME/docker/*.tar.gz | xargs -I {file} sh -c "zcat {file} | docker load"; fi
+  - docker-compose pull
 
 cache:
   bundler: true
@@ -40,6 +41,7 @@ jobs:
       name: Deploy to heroku staging
       deploy: &heroku
         on: develop
+        skip_cleanup: true
         provider: heroku
         app: asterismo-develop
         api_key: $HEROKU_AUTH_TOKEN
@@ -48,6 +50,7 @@ jobs:
       name: Deploy to heroku production
       deploy: &heroku
         on: master
+        skip_cleanup: true
         provider: heroku
         app: asterismo
         api_key: $HEROKU_AUTH_TOKEN
