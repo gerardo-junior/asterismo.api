@@ -37,5 +37,5 @@ jobs:
       name: Deploy to heroku
       deploy: &heroku
         provider: heroku
-        app: asterismo.api
+        app: asterismo
         api_key: $HEROKU_AUTH_TOKEN
