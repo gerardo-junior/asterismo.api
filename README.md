@@ -1,4 +1,4 @@
-# asterismo.api
+# Asterismo backend API
 
 ```
     [+] AUTOR:        Gerardo Junior
@@ -11,3 +11,6 @@
 | master  | develop  |
 | :------------: | :------------: |
 | [![Build Status](https://travis-ci.org/gerardo-junior/asterismo.api.svg?branch=master)](https://travis-ci.org/gerardo-junior/asterismo.api)  | [![Build Status](https://travis-ci.org/gerardo-junior/asterismo.api.svg?branch=develop)](https://travis-ci.org/gerardo-junior/asterismo.api)  |
+
+### License  
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
