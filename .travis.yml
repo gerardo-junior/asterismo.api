@@ -23,15 +23,15 @@ jobs:
   include:
     - stage: Tests
       name: Lint tests               
-      script: echo "run lint tests...' | true
+      script: docker-compose run composer test-lint
     
     - stage: Tests
       name: Unit tests 
-      script: echo "run unit tests...' | true
+      script: docker-compose run composer test-unit
 
     - stage: Tests
       name: Integration tests 
-      script: echo "run integration tests...' | true
+      script: docker-compose run composer test-e2e
 
     - stage: Deploy
       name: Deploy to heroku production

@@ -45,6 +45,14 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "test-lint": "",
+        "test-unit": "",
+        "test-e2e": "",
+        "test": [
+            "@test-lint",
+            "@test-unit",
+            "@test-e2e"
         ]
     },
     "conflict": {
