@@ -43,7 +43,7 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd",
             "doctrine:database:create --if-not-exists --no-interaction": "symfony-cmd",
-            "doctrine:schema:update --force": "symfony-cmd"
+            "doctrine:schema:update --force --no-interaction": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
