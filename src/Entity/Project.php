@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiProperty;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -19,6 +21,19 @@ class Project
     private $id;
 
     /**
+     * @param string $name A name property
+     * 
+     * @ApiProperty(
+     *     attributes={
+     *         "swagger_context"={
+     *             "type"="string",
+     *             "enum"={"one", "two"},
+     *             "example"="one"
+     *         }
+     *     }
+     * )
+     * 
+     * @Assert\NotBlank
      * @ORM\Column(type="string", length=255)
      */
     private $name;

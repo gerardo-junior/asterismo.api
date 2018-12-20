@@ -1,4 +1,3 @@
-default:
-   prefix: /
-   resource: App\Controller\DefaultController
-   type: annotation
+swagger_ui:
+   path: /
+   controller: api_platform.swagger.action.ui
