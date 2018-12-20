@@ -13,7 +13,6 @@ class DefaultController extends AbstractController
      */
     public function index()
     {
-        die(phpinfo());
         $number = random_int(0, 100);
 
         return new Response(
