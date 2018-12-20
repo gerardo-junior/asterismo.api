@@ -12,12 +12,16 @@ if ('prod' !== $_SERVER['APP_ENV']) {
     if (!class_exists(Dotenv::class)) {
         throw new RuntimeException('The "APP_ENV" environment variable is not set to "prod". Please run "composer require symfony/dotenv" to load the ".env" files configuring the application.');
     }
+}
 
-    if ('test' === $_SERVER['APP_ENV']) {
-        (new Dotenv())->loadEnv(dirname(__DIR__).'/.env.test');
-    } else {
-        (new Dotenv())->loadEnv(dirname(__DIR__).'/.env');
-    }
+if ('production' === $_SERVER['APP_ENV']) {
+    (new Dotenv())->loadEnv(dirname(__DIR__).'/.env.production');
+} elseif ('staging' === $_SERVER['APP_ENV']) {
+    (new Dotenv())->loadEnv(dirname(__DIR__).'/.env.staging');
+} elseif ('test' === $_SERVER['APP_ENV']) {
+    (new Dotenv())->loadEnv(dirname(__DIR__).'/.env.test');
+} else {
+    (new Dotenv())->loadEnv(dirname(__DIR__).'/.env');
 }
 
 $_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = $_SERVER['APP_ENV'] ?: $_ENV['APP_ENV'] ?: 'dev';
