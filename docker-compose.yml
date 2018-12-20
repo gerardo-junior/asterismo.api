@@ -11,6 +11,8 @@ services:
     ports:
       - 1234:80
       - 9000:9000 # xdebug port
+    links:
+      - mariadb
     depends_on:
       - mariadb
 
