@@ -43,7 +43,7 @@ jobs:
         on: develop
         skip_cleanup: true
         provider: heroku
-        app: asterismo-develop
+        app: asterismo-staging
         api_key: $HEROKU_AUTH_TOKEN
 
     - stage: Deploy

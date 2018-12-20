@@ -17,14 +17,6 @@ final class SwaggerDecorator implements NormalizerInterface
     {
         $docs = $this->decorated->normalize($object, $format, $context);
 
-        $customDefinition = [
-            'name' => 'fields',
-            'description' => 'Fields to remove of the output',
-            'default' => 'id',
-            'in' => 'query',
-        ];
-
-	
         // Override title
         $docs['info']['title'] = 'Asterismo backend API';
 
