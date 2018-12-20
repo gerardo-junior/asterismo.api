@@ -6,6 +6,7 @@
     [+] EMAIL:        me@gerardo-junior.com
     [+] GITHUB:       https://github.com/gerardo-junior/asterismo.api
     [+] TELEGRAM:     @MrGerardoJunior
+    [+] URL:          https://http://api.asterismo.gerardo-junior.com/
 ```
 
 | [master](https://http://api.asterismo.gerardo-junior.com/)  | [develop](https://asterismo-staging.herokuapp.com/)  |
