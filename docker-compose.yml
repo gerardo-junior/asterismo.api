@@ -10,17 +10,20 @@ services:
         target: /usr/share/src
     ports:
       - 1234:80
-      - 9000:9000 # xdebug port
+      # - 9000:9000 # xdebug port
     links:
       - mariadb
     depends_on:
       - mariadb
 
   mariadb:
-    image: mariadb:10.4
+    image: mariadb:10.3.11
     restart: on-failure
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_RANDOM_ROOT_PASSWORD=true
+      - MYSQL_DATABASE=asterismo
+      - MYSQL_USER=asterismo
+      - MYSQL_PASSWORD=asterismo
     volumes:
       - type: volume
         source: dbdata
