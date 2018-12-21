@@ -1,5 +1,9 @@
 # Asterismo backend API
 
+
+![Imagem](.github/assets/asterismo_logo.jpg)
+
+
 ```
     [+] AUTOR:        Gerardo Junior
     [+] SITE:         https://gerardo-junior.com
