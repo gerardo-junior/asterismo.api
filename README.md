@@ -1,7 +1,7 @@
 # Asterismo backend API
 
 
-![Imagem](.github/assets/asterismo_logo.jpg)
+![Imagem](.github/assets/asterismo_logo.png)
 
 
 ```
