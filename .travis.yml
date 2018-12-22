@@ -56,4 +56,4 @@ jobs:
           condition: $TRAVIS_BRANCH =~ ^master|develop$
         skip_cleanup: true
         provider: script
-        script: ./.github/github-deploy.sh
+        script: sh -x ./.github/github-deploy.sh
