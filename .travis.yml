@@ -58,7 +58,9 @@ jobs:
     - stage: Deploy
       name: Deploy to github repository
       deploy: &script
-        on: master, develop
+        on:
+          all_branches: true
+          condition: $TRAVIS_BRANCH =~ ^master|develop$
         skip_cleanup: true
         provider: script
         script: 
