@@ -56,14 +56,15 @@ jobs:
           condition: $TRAVIS_BRANCH =~ ^master|develop$
         skip_cleanup: true
         provider: script
-        script: 
-          - cd $HOME
-          - git config --global user.email "bot@gerardo-junior.com"
-          - git config --global user.name "Bot of gerardo"
-          - git clone --recurse-submodules -b $TRAVIS_BRANCH https://github.com/gerardo-junior/asterismo
-          - cd asterismo
-          - git submodule update --remote api
-          - git add api
-          - git commit -m "TRAVIS api \#${TRAVIS_BUILD_NUMBER} - Updating submodule api"
-          - git push --force --repo https://${GITHUB_BOT_AUTH_TOKEN}@github.com/gerardo-junior/asterismo
-          - cd ../ && rm -rf asterismo
+        script: sh -c ' 
+                        cd $HOME;
+                        git config --global user.email "bot@gerardo-junior.com";
+                        git config --global user.name "Bot of gerardo";
+                        git clone --recurse-submodules -b $TRAVIS_BRANCH https://github.com/gerardo-junior/asterismo;
+                        cd asterismo;
+                        git submodule update --remote api;
+                        git add api;
+                        git commit -m "TRAVIS api \#${TRAVIS_BUILD_NUMBER} - Updating submodule api";
+                        git push --force --repo https://${GITHUB_BOT_AUTH_TOKEN}@github.com/gerardo-junior/asterismo;
+                        cd ../ && rm -rf asterismo;
+                      '
