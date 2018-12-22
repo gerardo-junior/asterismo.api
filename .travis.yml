@@ -38,21 +38,14 @@ jobs:
       script: docker-compose run api composer test-e2e
     
     - stage: Deploy
-      name: Deploy to heroku staging
+      name: Deploy to heroku
       deploy: &heroku
-        on: develop
+        on:
+          all_branches: true
+          condition: $TRAVIS_BRANCH =~ ^master|develop$
         skip_cleanup: true
         provider: heroku
-        app: asterismo-staging
-        api_key: $HEROKU_AUTH_TOKEN
-
-    - stage: Deploy
-      name: Deploy to heroku production
-      deploy: &heroku
-        on: master
-        skip_cleanup: true
-        provider: heroku
-        app: asterismo
+        app: $([ ! "$TRAVIS_BRANCH" = "master" ] && echo "$TRAVIS_BRANCH--")asterismo
         api_key: $HEROKU_AUTH_TOKEN
 
     - stage: Deploy
