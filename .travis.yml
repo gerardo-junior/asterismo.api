@@ -45,7 +45,7 @@ jobs:
           condition: $TRAVIS_BRANCH =~ ^master|develop$
         skip_cleanup: true
         provider: heroku
-        app: $([ ! "$TRAVIS_BRANCH" = "master" ] && echo "$TRAVIS_BRANCH--")asterismo
+        app: $([ ! "$TRAVIS_BRANCH" = "master" ] && echo $TRAVIS_BRANCH--)asterismo
         api_key: $HEROKU_AUTH_TOKEN
 
     - stage: Deploy
