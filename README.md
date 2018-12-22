@@ -15,7 +15,7 @@
     [+] URL:          https://api.asterismo.gerardo-junior.com/
 ```
 
-| [master](https://api.asterismo.gerardo-junior.com/)  | [develop](https://asterismo-staging.herokuapp.com/)  |
+| [master](https://api.asterismo.gerardo-junior.com/)  | [develop](https://develop--asterismo.herokuapp.com/)  |
 | :------------: | :------------: |
 | [![Build Status](https://travis-ci.org/gerardo-junior/asterismo.api.svg?branch=master)](https://travis-ci.org/gerardo-junior/asterismo.api)  | [![Build Status](https://travis-ci.org/gerardo-junior/asterismo.api.svg?branch=develop)](https://travis-ci.org/gerardo-junior/asterismo.api)  |
 
