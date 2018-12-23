@@ -1,6 +1,3 @@
-# Asterismo backend API
-
-
 [![Imagem](.github/assets/asterismo_logo.jpg)](https://api.asterismo.gerardo-junior.com/)
 
 
