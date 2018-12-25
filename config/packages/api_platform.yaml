@@ -1,3 +1,12 @@
 api_platform:
+    # The title of the API.
+    title: 'Asterismo backend API'
+
+    # The description of the API.
+    description: 'The github project manager'
+
+    # The version of the API.
+    version: '1.0.0'
+
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']

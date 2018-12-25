@@ -17,10 +17,9 @@ final class SwaggerDecorator implements NormalizerInterface
     {
         $docs = $this->decorated->normalize($object, $format, $context);
 
-        // Override title
-        $docs['info']['title'] = 'Asterismo backend API';
-        $docs['info']['version'] = '1.0.0';
-        $docs['basePath'] = '/api';
+        // // Override title
+        // $docs['info']['title'] = 'Asterismo backend API';
+        // $docs['info']['version'] = '1.0.0';
 
         return $docs;
     }
