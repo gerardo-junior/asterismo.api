@@ -89,7 +89,7 @@ edit the file [docker-compose.yml](docker-compose.yml)
 # (...)
 
 api: 
-  image: gerardojunior/symfony.environment:stable
+  image: gerardojunior/symfony:stable
   volumes:
     - type: bind
       source: ./
