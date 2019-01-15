@@ -6,12 +6,15 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "api-platform/api-pack": "^1.1",
+        "friendsofsymfony/user-bundle": "~2.0",
         "sensio/framework-extra-bundle": "^5.2",
         "symfony/console": "4.2.*",
         "symfony/dotenv": "4.2.*",
         "symfony/flex": "^1.1",
         "symfony/framework-bundle": "4.2.*",
         "symfony/orm-pack": "^1.0",
+        "symfony/swiftmailer-bundle": "^3.2",
+        "symfony/translation": "4.2.*",
         "symfony/yaml": "4.2.*"
     },
     "config": {
@@ -51,10 +54,12 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
+        "security-checker": "security-checker security:check",
         "test-lint": "phplint",
         "test-unit": "./bin/phpunit",
         "test-e2e": "boomerang ./tests/e2e",
         "test": [
+            "@security-checker",
             "@test-lint",
             "@test-unit",
             "@test-e2e"
@@ -72,6 +77,7 @@
     "require-dev": {
         "boomerang/boomerang": "^0.3.0",
         "overtrue/phplint": "^1.1",
+        "sensiolabs/security-checker": "^5.0",
         "symfony/maker-bundle": "^1.10",
         "symfony/test-pack": "^1.0"
     }

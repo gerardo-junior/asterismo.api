@@ -22,6 +22,10 @@ cache:
 jobs:  
   include:
     - stage: Tests
+      name: Security Checker
+      script: docker-compose run api composer security-checker
+      
+    - stage: Tests
       name: Lint tests
       script: docker-compose run api composer test-lint
     
